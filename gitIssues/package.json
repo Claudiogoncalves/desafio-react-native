@@ -1,0 +1,56 @@
+{
+  "name": "gitIssues",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint .",
+    "postinstall": "npx jetify"
+  },
+  "dependencies": {
+    "@react-native-community/async-storage": "^1.6.1",
+    "axios": "^0.19.0",
+    "prop-types": "^15.7.2",
+    "react": "16.8.6",
+    "react-native": "0.60.5",
+    "react-native-gesture-handler": "^1.3.0",
+    "react-native-vector-icons": "^6.6.0",
+    "react-navigation": "^3.11.1",
+    "reactotron-react-native": "^3.6.4",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/runtime": "^7.5.5",
+    "@react-native-community/eslint-config": "^0.0.5",
+    "@testing-library/react-native": "^4.0.7",
+    "@types/jest": "^24.0.17",
+    "babel-jest": "^24.8.0",
+    "eslint": "^6.1.0",
+    "install": "^0.13.0",
+    "jest": "^24.8.0",
+    "jetifier": "^1.6.4",
+    "metro-react-native-babel-preset": "^0.56.0",
+    "npm": "^6.10.3",
+    "ou": "^0.0.2",
+    "react-test-renderer": "16.8.6"
+  },
+  "jest": {
+    "preset": "@testing-library/react-native",
+    "setupFiles": ["./__mocks__/jestSetupFile.js"],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(@react-native-community|react-native|react-native-vector-icons|react-navigation|react-native-gesture-handler)/)"
+    ],
+    "testMatch": [
+      "**/__tests__/**/*.test.js"
+    ],
+    "collectCoverageFrom": [
+      "!src/service/api.js"
+    ],
+    "coverageDirectory": "__tests__/coverage",
+    "moduleNameMapper": {
+      "ˆ~/(.*)": "<rootDir>/src/$1"
+    }
+  }
+}
